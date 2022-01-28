@@ -1,0 +1,28 @@
+@import "../../../styles/variables.scss";
+
+.header {
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: $primary-color;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 30;
+}
+
+.header-links {
+    display: flex;
+    flex-flow: row;
+    width: 70%;
+    align-items: center;
+    justify-content: space-evenly;
+    color: $white-color;
+
+    & > p {
+        font-family: $montserrat-font;
+    }
+}

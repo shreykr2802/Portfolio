@@ -1,0 +1,68 @@
+@import "../../../styles/variables.scss";
+
+.contents-container {
+    background-color: $primary-color;
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    margin-top: 4rem;
+}
+
+.intro-section {
+    position: absolute;
+    top: 25%;
+    left: 3rem;
+    color: $white-color;
+    font-family: $montserrat-font;
+    font-size: 3rem;
+}
+
+.image-section {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.hello-text {
+    font-family: $montserrat-font;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.scroll-down {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    animation: scroll-down-animation 2s ease-in infinite;
+}
+
+.button-home-section {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scroll-down-text {
+    color: $black-color;
+    font-family: $montserrat-font;
+    font-size: 1.5rem;
+}
+
+@keyframes scroll-down-animation {
+    0% {
+        transform: translateY(-5px);
+    }
+    25% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    75% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}

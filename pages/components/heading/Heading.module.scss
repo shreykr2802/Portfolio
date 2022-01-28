@@ -1,0 +1,17 @@
+@import "../../../styles/variables.scss";
+
+.heading-text {
+    font-family: $montserrat-font;
+    font-weight: 700;    
+    font-size: 4rem;
+    padding: 0;
+    margin: 1rem;
+
+    &.red {
+        color: $primary-color;
+    }
+
+    &.white {
+        color: $white-color;
+    }
+}

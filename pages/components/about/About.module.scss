@@ -1,0 +1,16 @@
+@import "../../../styles/variables.scss";
+
+.about-me-container {
+    background: $gray-color-400;
+    width: calc(100% - 4rem);
+    margin: 2rem;
+}
+
+.about-me-text {
+    font-family: $montserrat-font;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 1.5%;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
