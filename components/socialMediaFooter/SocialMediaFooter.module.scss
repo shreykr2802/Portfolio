@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.footer-social-media {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.text-social-media {
+    font-family: $montserrat-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    color: $white-color;
+}
+
+.social-media-links {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.text-copyright {
+    font-family: $montserrat-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 59px;
+    text-align: center;
+    color: $primary-color;
+}

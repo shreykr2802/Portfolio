@@ -1,7 +1,7 @@
 import classes from './Contents.module.scss';
 import Image from 'next/image';
 import Button from '../button/Button';
-import { BsMouseFill } from 'react-icons/bs';
+import { Icon } from '@iconify/react';
 
 const Contents = () => {
     return (
@@ -13,7 +13,7 @@ const Contents = () => {
 
                     {/* @ts-ignore */}
                     <div className={classes['scroll-down']}>
-                        <BsMouseFill size="30" color="black" />
+                        <Icon icon="bi:mouse-fill" fontSize="30" color="black" />
                         <p className={classes['scroll-down-text']}>Scroll Down</p>
                     </div>
                 </div>

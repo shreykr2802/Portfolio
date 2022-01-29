@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.connect-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    background-color: $black-color-200;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.connect-text-button {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect-text {
+    font-family: $montserrat-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: $white-color;
+}

@@ -1,7 +1,6 @@
 import HeadingText from "../heading/HeadingText";
 import ToolkitDetail from "../toolkitDetail/ToolkitDetail";
 import classes from "./Toolkit.module.scss";
-import { FaReact, FaCss3Alt } from "react-icons/fa";
 
 const Toolkit = () => {
 
@@ -88,7 +87,7 @@ const Toolkit = () => {
                 {
                     toolkits.map((toolkit: { name: string, iconName: string, width: string, height: string, show?: boolean }) => {
                         return (
-                            <ToolkitDetail {...toolkit} />
+                            <ToolkitDetail {...toolkit} key={toolkit.name} />
                         )
                     })
                 }
