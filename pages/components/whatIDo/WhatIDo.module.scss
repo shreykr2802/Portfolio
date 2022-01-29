@@ -1,0 +1,55 @@
+@import "../../../styles/variables.scss";
+
+.what-i-do-container {
+    background: $pink-color-400;
+    width: calc(100% - 4rem);
+    margin: 2rem;
+    box-shadow: 0px 0px 0px 0px #00000000;
+}
+
+.what-i-do-row {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.what-i-do-col {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.what-i-do-design {
+    background-color: $white-color;
+    border-radius: 16px;
+    margin: 1rem;
+    height: 100%;
+    box-shadow: 0px 8px 8px $black-color-100;
+}
+
+.contents-text {
+    font-family: $montserrat-font;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 1.5%;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.small-heading {
+    color: $primary-color;
+}
+
+.text-categories {
+    font-weight: bold;;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.min-width-design {
+    min-width: calc(100% - 2rem);
+}
