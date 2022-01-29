@@ -3,6 +3,7 @@ import Contents from "../../components/contents/Contents";
 import Header from "../../components/header/Header";
 import classes from "../../styles/Home.module.scss";
 import WhatIDo from "../../components/whatIDo/WhatIDo";
+import Toolkit from "../../components/toolkit/Toolkit";
 
 const HomeContents = () => {
     return (
@@ -12,6 +13,7 @@ const HomeContents = () => {
                 <Contents />
                 <About />
                 <WhatIDo />
+                <Toolkit />
             </main>
         </>
     )
