@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.toolkit-container {
+    background: $gray-color-400;
+    width: calc(100% - 4rem);
+    margin: 2rem;
+}
+
+.detailed-toolkit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
