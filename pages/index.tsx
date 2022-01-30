@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Provider } from 'react-redux'
 import store from '../redux/store'
 import styles from '../styles/Home.module.scss'
-import HomeContents from '../components/about/homeContents/HomeContents'
+import HomeContents from '../components/homeContents/HomeContents'
 
 const Home: NextPage = () => {
   return (
