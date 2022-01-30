@@ -1,5 +1,5 @@
 import Header from "../header/Header";
-import classes from "../../../styles/Home.module.scss";
+import classes from "../../styles/Home.module.scss";
 
 const BlogContents = () => {
 
