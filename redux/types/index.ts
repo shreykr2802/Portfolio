@@ -1,4 +1,3 @@
 export interface AppTypes {
-    colorSideBar: string,
-    showColorSideBar: boolean
+    showContactForm: boolean
 }

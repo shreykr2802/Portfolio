@@ -6,8 +6,13 @@ import WhatIDo from "../../components/whatIDo/WhatIDo";
 import Toolkit from "../../components/toolkit/Toolkit";
 import Connect from "../../components/connect/Connect";
 import SocialMediaFooter from "../../components/socialMediaFooter/SocialMediaFooter";
+import ContactForm from "../../components/contactForm/ContactForm";
+import useSelector from "../../utils/useSelector";
 
 const HomeContents = () => {
+
+    const showContactForm = useSelector(state => state.app.showContactForm);
+
     return (
         <>
             <Header />
@@ -19,6 +24,7 @@ const HomeContents = () => {
                 <Connect />
             </main>
             <SocialMediaFooter />
+            {showContactForm && <ContactForm />}
         </>
     )
 };
