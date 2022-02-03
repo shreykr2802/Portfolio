@@ -3,7 +3,7 @@ import classes from "./About.module.scss";
 
 const About = () => {
     return (
-        <div className={classes['about-me-container']}>
+        <div className={classes['about-me-container']} id="AboutSection">
             <HeadingText type="red" text="About Me?" />
             <p className={classes['about-me-text']}>
                 I entered the world of programming at an early age starting with C++, and never looked back. Made my hands dirty in all languages.
