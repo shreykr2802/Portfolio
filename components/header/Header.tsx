@@ -11,9 +11,9 @@ const Header = () => {
             </Link>
             <div className={classes['header-links']}>
                 <Link href="/">Home</Link>
-                <Link href="/">About</Link>
+                <Link href="/#AboutSection">About</Link>
                 <Link href="/blog">Blog</Link>
-                <Link href="/">Contact</Link>
+                <Link href="/#ContactSection">Contact</Link>
             </div>
         </header>
     );

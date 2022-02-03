@@ -13,7 +13,7 @@ const Connect = () => {
     }
 
     return (
-        <div className={classes['connect-container']}>
+        <div className={classes['connect-container']} id="ContactSection">
             <HeadingText type="white" text="Connect with me?" />
             <div className={classes['connect-text-button']}>
                 <p className={classes['connect-text']}>
