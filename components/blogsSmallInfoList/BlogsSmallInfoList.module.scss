@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+
+.blog-list-section {
+    width: 70%;
+    margin: 2rem;
+}
+
+.small-blog-info {
+   
+}
+
+.small-blog-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray-color-200;
+}
+
+.image-info {
+    margin: 1rem;
+}
+
+.days-posted {
+    font-family: $montserrat-font;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 0.7rem;
+    color: $black-color-200;
+}
+
+.blog-title {
+    font-family: $montserrat-font;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 23px;
+    color: $black-color-200;
+}
+
+.blog-small-content {
+    font-family: $montserrat-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 23px;
+    color: $black-color-200;
+}

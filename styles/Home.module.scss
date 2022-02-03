@@ -1,4 +1,15 @@
+@import "./variables.scss";
+
 .main-section {
   display: flex;
   flex-flow: column;
+}
+
+.main-text-intro {
+  color: $primary-color;
+  font-size: 1rem;
+  letter-spacing: 6px;
+  font-family: $montserrat-font;
+  margin-top: 5rem;
+  text-align: center;
 }

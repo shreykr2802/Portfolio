@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+
+.tags-section {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tags-block {
+    background-color: $pink-color-300;
+    border: 1px solid $primary-color;
+    margin: 0.5rem;
+    border-radius: 25px;
+    min-width: 6rem;
+    text-align: center;
+    height: 2rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag-name {
+    font-family: $montserrat-font;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 0.7rem;
+    line-height: 22px;
+    margin: 0 1rem;
+    text-transform: capitalize;
+}
