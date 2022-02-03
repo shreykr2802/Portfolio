@@ -1,6 +1,7 @@
 import Header from "../header/Header";
 import classes from "../../styles/Home.module.scss";
 import BlogsContainer from "../blogsContainer/BlogsContainer";
+import SocialMediaFooter from "../socialMediaFooter/SocialMediaFooter";
 
 const BlogContents = () => {
 
@@ -13,6 +14,7 @@ const BlogContents = () => {
                 </div>
                 <BlogsContainer />
             </main>
+            <SocialMediaFooter />
         </>
     )
 };

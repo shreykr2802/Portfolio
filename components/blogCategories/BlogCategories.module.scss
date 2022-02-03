@@ -2,6 +2,60 @@
 
 .blog-categories {
     width: 30%;
-    margin: 2rem 2rem 2rem 0rem; 
+    margin: 2rem 2rem 2rem 0rem;
     border-left: 1px solid $gray-color-200;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-box {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border: 1px solid $primary-color;
+    margin: 1rem;
+    border-radius: 8px;
+    position: relative;
+
+    &:hover {
+        & > p {
+            opacity: 1;
+            animation: category-name-animation 0.2s ease-in;
+        }
+    }
+}
+
+@keyframes category-name-animation {
+    from {
+        transform: translateY(10rem) translateX(-50%);
+    }
+    to {
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+.category-image {
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.category-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    z-index: 30;
+    color: $primary-color;
+    font-family: $montserrat-font;
+    font-weight: 800;
+    opacity: 0;
 }
