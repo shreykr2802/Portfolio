@@ -2,14 +2,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import BlogContents from '../../components/blogContents/BlogContents';
+import { fetchBlogDataStart } from '../../redux/slices/blogSlice';
 
 const Blog: NextPage = () => {
 
+    const dispatch = useDispatch();
+
     useEffect(() => {
-        fetch('/api/hello').then(res => res.json()).then(res => console.log(res))
-            .catch(err => console.log(err));
-    }, [])
+        // fetch('/api/hello').then(res => res.json()).then(res => console.log(res))
+        //     .catch(err => console.log(err));
+        dispatch(fetchBlogDataStart());
+    }, [dispatch])
 
     return (
         <>

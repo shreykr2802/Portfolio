@@ -46,8 +46,8 @@ const BlogsSmallInfoList = () => {
         <div className={classes['blog-list-section']}>
             {blogs.map(blog => {
                 return (
-                    <Link href={`/blog/${blog.id}`}>
-                        <div className={classes['small-blog-container']} key={blog.id} onClick={() => console.log(blog)}>
+                    <Link href={`/blog/${blog.id}`} key={blog.id}>
+                        <div className={classes['small-blog-container']} onClick={() => console.log(blog)}>
                             <div className={classes['small-blog-info']}>
                                 <p><span className={classes['blog-title']}>{blog.title}</span> - <small className={classes['days-posted']}><i>{blog.uploaded}</i></small></p>
                                 <p className={classes['blog-small-content']}>{blog.content}</p>
