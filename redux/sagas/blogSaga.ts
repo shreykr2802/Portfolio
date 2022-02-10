@@ -1,7 +1,7 @@
-import { put } from "redux-saga/effects";
+import { put, takeLatest } from "redux-saga/effects";
 import axios from "../axios/axios";
 
-import { fetchBlogDataSuccess, fetchBlogDataFailed } from "../slices/blogSlice";
+import { fetchBlogDataSuccess, fetchBlogDataFailed, fetchBlogDataStart } from "../slices/blogSlice";
 
 interface ResponseGenerator {
     config?: any;
@@ -15,10 +15,16 @@ interface ResponseGenerator {
 export function* blogSaga() {
     try {
         const response: ResponseGenerator = yield axios.get("/blogs");
+        console.log(response);
         yield put(fetchBlogDataSuccess(response.data));
     } catch (error) {
         yield put(fetchBlogDataFailed(error));
     }
 }
 
-export default blogSaga;
+export function* watchBlogData() {
+    yield takeLatest(fetchBlogDataStart, blogSaga);
+}
+
+
+export default watchBlogData;

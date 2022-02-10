@@ -11,8 +11,6 @@ const Blog: NextPage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        // fetch('/api/hello').then(res => res.json()).then(res => console.log(res))
-        //     .catch(err => console.log(err));
         dispatch(fetchBlogDataStart());
     }, [dispatch])
 

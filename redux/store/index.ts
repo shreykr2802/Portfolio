@@ -4,7 +4,7 @@ import createSagaMiddleware from "redux-saga";
 import blogReducer from "../slices/blogSlice";
 
 import appReducer from "../slices/appSlice";
-import watchBlogData from "../sagas";
+import rootSaga from "../sagas";
 
 const rootReducer = combineReducers({
     app: appReducer,
@@ -22,6 +22,6 @@ const store = createStore(
     composeEnhancers(applyMiddleware(thunk, sagaMiddleware))
 );
 
-sagaMiddleware.run(watchBlogData)
+sagaMiddleware.run(rootSaga)
 
 export default store;

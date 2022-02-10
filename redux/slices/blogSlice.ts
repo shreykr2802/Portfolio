@@ -2,7 +2,7 @@
 
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface BlogState {
+export interface BlogState {
     blogs: any[];
     error: string;
     loading: boolean;
@@ -31,7 +31,7 @@ const blogSlice = createSlice({
             state.error = action.payload;
             state.loading = false;
         },
-    },
+    }
 });
 
 export const { fetchBlogDataStart, fetchBlogDataSuccess, fetchBlogDataFailed } = blogSlice.actions;
