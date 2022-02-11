@@ -4,11 +4,9 @@
     width: 30%;
     margin: 2rem 2rem 2rem 0rem;
     border-left: 1px solid $gray-color-200;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-rows: max-content;
 }
 
 .category-box {
@@ -19,6 +17,7 @@
     margin: 1rem;
     border-radius: 8px;
     position: relative;
+    object-fit: cover;
 
     &:hover {
         & > p {
