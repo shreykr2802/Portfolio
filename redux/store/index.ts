@@ -2,13 +2,17 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import createSagaMiddleware from "redux-saga";
 import blogReducer from "../slices/blogSlice";
+import tagReducer from "../slices/tagSlice";
+import contentReucer from "../slices/contentSlice";
 
 import appReducer from "../slices/appSlice";
 import rootSaga from "../sagas";
 
 const rootReducer = combineReducers({
     app: appReducer,
-    blogs: blogReducer
+    blogs: blogReducer,
+    tags: tagReducer,
+    content: contentReucer
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

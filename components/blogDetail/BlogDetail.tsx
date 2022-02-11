@@ -1,9 +1,11 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
+import { formatDateTime } from "../../utils/dateTimeUtil";
 import classes from "./BlogDetail.module.scss";
 
 const BlogDetail = ({ blog }: any) => {
+
     return (
         <div className={classes['blog-detail-section']}>
             <Link href="/blog">
@@ -13,11 +15,12 @@ const BlogDetail = ({ blog }: any) => {
                 </div>
             </Link>
             <div className={classes['main-text-intro']}>
-                <p><span className={classes['blog-title']}>{blog.name}</span> - <small className={classes['days-posted']}><i>{blog.time}</i></small></p>
+                <p><span className={classes['blog-title']}>{blog.title}</span> - <small className={classes['days-posted']}><i>{blog.read_time} min read</i></small></p>
+                <p><small className={classes['days-posted']}>{formatDateTime(blog.updated_on)}</small></p>
             </div>
             <div>
                 <div className={classes['blog-detail-main-image']} >
-                    <Image src={blog.mainImg} height={100} width={100} layout="fill" objectFit="cover" />
+                    <Image src={"/temp.jpeg"} height={100} width={100} layout="fill" objectFit="cover" />
                 </div>
                 <div className={classes['blog-detail-main-text']} dangerouslySetInnerHTML={{ __html: blog.content }}>
                     {/* <p >{blog.content}</p> */}

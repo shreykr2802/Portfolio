@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import BlogContents from '../../components/blogContents/BlogContents';
 import { fetchBlogDataStart } from '../../redux/slices/blogSlice';
+import { fetchTagDataStart } from '../../redux/slices/tagSlice';
 
 const Blog: NextPage = () => {
 
@@ -12,6 +13,7 @@ const Blog: NextPage = () => {
 
     useEffect(() => {
         dispatch(fetchBlogDataStart());
+        dispatch(fetchTagDataStart());
     }, [dispatch])
 
     return (
