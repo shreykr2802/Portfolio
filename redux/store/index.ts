@@ -7,12 +7,16 @@ import contentReucer from "../slices/contentSlice";
 
 import appReducer from "../slices/appSlice";
 import rootSaga from "../sagas";
+import authReducer from "../slices/authSlice";
+import adminReducer from "../slices/adminSlice";
 
 const rootReducer = combineReducers({
     app: appReducer,
     blogs: blogReducer,
     tags: tagReducer,
-    content: contentReucer
+    content: contentReucer,
+    auth: authReducer,
+    admin: adminReducer
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

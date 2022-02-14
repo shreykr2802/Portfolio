@@ -13,7 +13,9 @@ const BlogCategories = () => {
                     categories.map((category) => (
                         <div className={classes['category-box']} key={category.id}>
                             <p className={classes['category-name']}>{category.name}</p>
-                            <Image src={"/category.jpeg"} width={100} height={100} layout="responsive" className={classes['category-image']} />
+                            <div style={{ height: "10rem", width: "10rem", position: "relative" }}>
+                                <Image src={category.data} layout="fill" className={classes['category-image']} />
+                            </div>
                         </div>
                     ))
                 }
