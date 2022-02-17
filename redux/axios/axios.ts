@@ -6,11 +6,13 @@ const instance = axios.create({
 
 instance.interceptors.request.use((config) => {
     console.log("config", config);
-    if (config.url?.includes("/admin") || config.url?.includes("/attachment")) {
+    if (config.url?.includes("/admin/") || config.url?.includes("/attachment")) {
         config.headers = {
             ...config.headers,
             'x-auth-token': localStorage.getItem("accessToken") || ""
         }
+        return config;
+    } else {
         return config;
     }
 })

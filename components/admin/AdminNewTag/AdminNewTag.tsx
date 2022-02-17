@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { insertNewTagStart } from "../../../redux/slices/adminSlice";
 import useSelector from "../../../utils/useSelector";
+import ActionButtonContainer from "../../atoms/ActionButtonContainer/ActionButtonContainer";
 import LabelAndInput from "../../atoms/LabelAndInput/LabelAndInput";
 import LabelAndInputContainer from "../../atoms/LabelAndInputContainer/LabelAndInputContainer";
 import Button from "../../button/Button";
@@ -15,7 +16,7 @@ const AdminNewTag = () => {
     const dispatch = useDispatch();
     const router = useRouter();
 
-    const result = useSelector(state => state.admin.result);
+    const result = useSelector(state => state.admin.resultTag);
 
     useEffect(() => {
         if (result.success) {
@@ -41,7 +42,10 @@ const AdminNewTag = () => {
         <LabelAndInputContainer>
             <LabelAndInput name="Name" type="text" value={name} setValue={setName} />
             <LabelAndInput name="Image" type="file" value={file} setValue={setFile} />
-            <Button type="other" text="Create" onClick={createNewTag} />
+            <ActionButtonContainer>
+                <Button type="other" text="Create" onClick={createNewTag} />
+                <Button type="other" text="Home" onClick={() => router.replace("/admin/home")} />
+            </ActionButtonContainer>
         </LabelAndInputContainer>
     </div>
 }
