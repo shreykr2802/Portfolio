@@ -6,12 +6,14 @@ export interface BlogState {
     blogs: any[];
     error: string;
     loading: boolean;
+    blogData: any
 }
 
 const initialState = {
     blogs: [],
     error: "",
-    loading: false
+    loading: false,
+    blogData: {}
 } as BlogState;
 
 const blogSlice = createSlice({
@@ -31,8 +33,21 @@ const blogSlice = createSlice({
             state.error = action.payload;
             state.loading = false;
         },
+        fetchBlogDataByIdStart: (state, action: PayloadAction<any>) => {
+            state.error = "";
+            state.loading = true;
+        },
+        fetchBlogDataByIdSuccess: (state, action: PayloadAction<any>) => {
+            state.error = "";
+            state.loading = false;
+            state.blogData = action.payload;
+        },
+        fetchBlogDataByIdFailed: (state, action) => {
+            state.error = action.payload;
+            state.loading = false;
+        },
     }
 });
 
-export const { fetchBlogDataStart, fetchBlogDataSuccess, fetchBlogDataFailed } = blogSlice.actions;
+export const { fetchBlogDataStart, fetchBlogDataSuccess, fetchBlogDataFailed, fetchBlogDataByIdStart, fetchBlogDataByIdSuccess, fetchBlogDataByIdFailed } = blogSlice.actions;
 export default blogSlice.reducer;

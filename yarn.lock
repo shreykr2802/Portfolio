@@ -1369,6 +1369,11 @@ ms@2.1.2, ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
+multiselect-react-dropdown@^2.0.17:
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/multiselect-react-dropdown/-/multiselect-react-dropdown-2.0.17.tgz#f7455a3cb45dc14a7eaddfc563a39276e116bcd4"
+  integrity sha512-NB1RNY3lhcNDEaHRkoYfqD6t9+sdYe82bNFzpAGqUl4fquon/jKvtADImlP4enI6PNL+a7iHxNCbcrlY9WiLVw==
+
 nanoid@^3.1.23:
   version "3.2.0"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.2.0.tgz"

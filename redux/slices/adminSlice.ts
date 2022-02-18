@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export interface AdminState {
     resultTag: any,
     resultBlog: any,
+    resultUpdateBlog: any,
     error: string,
     loading: boolean
 }
@@ -10,6 +11,7 @@ export interface AdminState {
 const initialState = {
     resultTag: "",
     resultBlog: "",
+    resultUpdateBlog: "",
     error: "",
     loading: false
 } as AdminState;
@@ -44,8 +46,21 @@ const adminSlice = createSlice({
             state.error = action.payload;
             state.loading = false;
         },
+        updateBlogStart: (state, action: PayloadAction<any>) => {
+            state.error = "";
+            state.loading = true;
+        },
+        updateBlogSuccess: (state, action: PayloadAction<any>) => {
+            state.error = "";
+            state.loading = false;
+            state.resultUpdateBlog = action.payload
+        },
+        updateBlogFailed: (state, action) => {
+            state.error = action.payload;
+            state.loading = false;
+        },
     }
 });
 
-export const { insertNewTagStart, insertNewTagSuccess, insertNewTagFailed, insertNewBlogStart, insertNewBlogSuccess, insertNewBlogFailed } = adminSlice.actions;
+export const { insertNewTagStart, insertNewTagSuccess, insertNewTagFailed, insertNewBlogStart, insertNewBlogSuccess, insertNewBlogFailed, updateBlogStart, updateBlogSuccess, updateBlogFailed } = adminSlice.actions;
 export default adminSlice.reducer;

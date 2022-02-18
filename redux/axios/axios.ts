@@ -5,7 +5,6 @@ const instance = axios.create({
 });
 
 instance.interceptors.request.use((config) => {
-    console.log("config", config);
     if (config.url?.includes("/admin/") || config.url?.includes("/attachment")) {
         config.headers = {
             ...config.headers,

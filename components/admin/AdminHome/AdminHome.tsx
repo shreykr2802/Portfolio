@@ -12,6 +12,7 @@ const AdminHome = () => {
                 <LinkAdminHome name="Create new Blog" href="/admin/home/newblog" />
                 <LinkAdminHome name="Create new Tag" href="/admin/home/newtag" />
                 <LinkAdminHome name="Update a Blog" href="/admin/home/updateblog" />
+                {/* <LinkAdminHome name="Update a Tag" href="/admin/home/updatetag" /> */}
             </div>
         </>
     )

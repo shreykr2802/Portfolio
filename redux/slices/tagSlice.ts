@@ -4,12 +4,14 @@ export interface TagState {
     tags: any[];
     error: string;
     loading: boolean;
+    plainTags: any[]
 }
 
 const initialState = {
     tags: [],
     error: "",
-    loading: false
+    loading: false,
+    plainTags: []
 } as TagState;
 
 const tagSlice = createSlice({
@@ -29,8 +31,21 @@ const tagSlice = createSlice({
             state.error = action.payload;
             state.loading = false;
         },
+        fetchPlainTagDataStart: (state) => {
+            state.error = "";
+            state.loading = true;
+        },
+        fetchPlainTagDataSuccess: (state, action: PayloadAction<any>) => {
+            state.error = "";
+            state.loading = false;
+            state.plainTags = action.payload;
+        },
+        fetchPlainTagDataFailed: (state, action) => {
+            state.error = action.payload;
+            state.loading = false;
+        },
     }
 });
 
-export const { fetchTagDataStart, fetchTagDataSuccess, fetchTagDataFailed } = tagSlice.actions;
+export const { fetchTagDataStart, fetchTagDataSuccess, fetchTagDataFailed, fetchPlainTagDataStart, fetchPlainTagDataSuccess, fetchPlainTagDataFailed } = tagSlice.actions;
 export default tagSlice.reducer;
