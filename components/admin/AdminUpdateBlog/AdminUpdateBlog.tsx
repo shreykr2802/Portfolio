@@ -56,8 +56,7 @@ const AdminUpdateBlog = () => {
             title,
             read_time: readTime,
             short_intro: shortIntro,
-            // tags: selectedTags.map((tag: any) => tag.id),
-            tags: [100009, 100011, 100001],
+            tags: selectedTags.map((tag: any) => tag.id),
             content,
             id: blogId
         }
