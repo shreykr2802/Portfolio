@@ -1,10 +1,23 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { formatDateTime } from "../../utils/dateTimeUtil";
 import classes from "./BlogDetail.module.scss";
 
 const BlogDetail = ({ blog }: any) => {
+
+    const [displayContent, setDisplayContent] = useState<string>("");
+
+    useEffect(() => {
+        let oriContent = blog?.content;
+        for (let i = 0; i < blog?.images?.length; i++) {
+            oriContent = oriContent.replace(`{{image ${i + 2}}}`, `<br/><div style='width: 100%; height: 25rem; position: relative; overflow: hidden'>
+            <Image src=${blog?.images[i]?.data} height={100} width={100} layout="fill" objectFit="cover" />
+        </div>`);
+        }
+        setDisplayContent(oriContent);
+    }, [blog.images])
 
     return (
         <div className={classes['blog-detail-section']}>
@@ -19,11 +32,10 @@ const BlogDetail = ({ blog }: any) => {
                 <p><small className={classes['days-posted']}>{formatDateTime(blog.updated_on)}</small></p>
             </div>
             <div>
-                <div className={classes['blog-detail-main-image']} >
-                    <Image src={"/temp.jpeg"} height={100} width={100} layout="fill" objectFit="cover" />
-                </div>
-                <div className={classes['blog-detail-main-text']} dangerouslySetInnerHTML={{ __html: blog.content }}>
-                    {/* <p >{blog.content}</p> */}
+                {blog?.mainImage?.data && <div className={classes['blog-detail-main-image']} >
+                    <Image src={blog?.mainImage?.data} height={100} width={100} layout="fill" objectFit="cover" />
+                </div>}
+                <div className={classes['blog-detail-main-text']} dangerouslySetInnerHTML={{ __html: displayContent }}>
                 </div>
             </div>
         </div>
