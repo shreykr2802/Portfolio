@@ -6,7 +6,6 @@ import { ResponseGenerator } from "../types";
 
 export function* contentSaga(action: PayloadAction) {
     try {
-        yield console.log("saga", action);
         const response: ResponseGenerator = yield axios.get(`/blogs-data/${action.payload}`);
         yield put(fetchContentDataSuccess(response.data));
     } catch (error) {

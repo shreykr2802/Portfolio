@@ -12,6 +12,9 @@ const Button = ({ type, text, onClick }: { type: string, text: string, onClick: 
                 </>
             ) : (
                 <>
+                    <button className={classes['button-other']} onClick={onClick}>
+                        <span className={classes['button-other-text']}>{text}</span>
+                    </button>
                 </>
             )}
         </>

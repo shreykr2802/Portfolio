@@ -23,3 +23,21 @@
     font-family: $montserrat-font;
     font-size: 1.5rem;
 }
+
+.button-other {
+    width: 200px;
+    height: 50px;
+    background: $primary-color;
+    border: 2px solid $black-color;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px $black-color-100;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button-other-text {
+    color: $white-color;
+    font-weight: 700;
+    font-family: $montserrat-font;
+    font-size: 1.5rem;
+}

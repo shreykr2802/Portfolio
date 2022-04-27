@@ -1,0 +1,22 @@
+@import "../../../styles/variables.scss";
+
+.admin-newtag-container {
+    height: 60vh;
+    margin: 10rem;
+    background: #f4f4f4;
+    box-shadow: 10px 10px 15px rgba(220, 64, 64, 0.3);
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-text-intro {
+    color: $primary-color;
+    font-size: 2rem;
+    letter-spacing: 6px;
+    font-family: $montserrat-font;
+    text-align: center;
+    font-weight: 900;
+}
