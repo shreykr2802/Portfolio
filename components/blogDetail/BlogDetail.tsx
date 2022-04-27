@@ -12,7 +12,7 @@ const BlogDetail = ({ blog }: any) => {
     useEffect(() => {
         let oriContent = blog?.content;
         for (let i = 0; i < blog?.images?.length; i++) {
-            oriContent = oriContent.replace(`{{image ${i + 2}}}`, `<br/><div style='width: 100%; height: 25rem; position: relative; overflow: hidden'>
+            oriContent = oriContent.replace(`{{image ${i + 2}}}`, `<br/><div style='height: 25rem; overflow: hidden; text-align: center;'>
             <Image src=${blog?.images[i]?.data} height={100} width={100} layout="fill" objectFit="cover" />
         </div>`);
         }

@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header className={classes['header']}>
             <Link href="/">
-                <Image src="/Shrey-logo.png" alt="Shrey Kumar" width="268px" height="72px" className={classes['logo-image']} />
+                <img src="/Shrey-logo.png" alt="Shrey Kumar" width="268px" height="72px" className={classes['logo-image']} />
             </Link>
             <div className={classes['header-links']}>
                 <Link href="/">Home</Link>
