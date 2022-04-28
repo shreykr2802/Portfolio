@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins";
 
 .connect-container {
     width: 100%;
@@ -20,8 +21,28 @@
     font-family: $montserrat-font;
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2.5rem;
     line-height: 44px;
     text-align: center;
     color: $white-color;
+
+    @include for-medium-desktop-up {
+        font-size: 2.5rem;
+    }
+
+    @include for-desktop-up {
+        font-size: 2.25rem;
+    }
+
+    @include for-tablet-landscape-up {
+        font-size: 2rem;
+    }
+
+    @include for-tablet-portrait-up {
+        font-size: 1.5rem;
+    }
+
+    @include for-phone-only {
+        font-size: 1rem;
+    }
 }

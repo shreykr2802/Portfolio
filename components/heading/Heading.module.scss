@@ -1,8 +1,9 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins";
 
 .heading-text {
     font-family: $montserrat-font;
-    font-weight: 700;    
+    font-weight: 700;
     font-size: 3rem;
     padding: 0;
     margin: 1rem;
@@ -13,5 +14,25 @@
 
     &.white {
         color: $white-color;
+    }
+
+    @include for-medium-desktop-up {
+        font-size: 2.5rem;
+    }
+
+    @include for-desktop-up {
+        font-size: 2.25rem;
+    }
+
+    @include for-tablet-landscape-up {
+        font-size: 2rem;
+    }
+
+    @include for-tablet-portrait-up {
+        font-size: 1.5rem;
+    }
+
+    @include for-phone-only {
+        font-size: 1rem;
     }
 }

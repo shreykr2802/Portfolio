@@ -21,8 +21,6 @@ const Post = () => {
         dispatch(fetchContentDataStart(id));
     }, [])
 
-
-
     return (
         <>
             <Head>
@@ -41,8 +39,8 @@ const Post = () => {
 
 export async function getServerSideProps(context: any) {
     return {
-        props: {},
-    };
+        props: {}, // will be passed to the page component as props
+    }
 }
 
 export default Post;
