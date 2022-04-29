@@ -1,7 +1,12 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins";
 
 .blog-container {
     display: flex;
     flex-flow: row;
     width: 100%;
+
+    @include for-tablet-portrait-up {
+        flex-flow: column;
+    }
 }

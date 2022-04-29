@@ -16,9 +16,10 @@ const BlogsSmallInfoList = () => {
                     <Link href={`/blog/${blog.id}`} key={blog.id}>
                         <div className={classes['small-blog-container']}>
                             <div className={classes['small-blog-info']}>
-                                <p><span className={classes['blog-title']}>{blog.title}</span> - <small className={classes['days-posted']}><i>{formatDateTime(blog.updated_on)}</i></small></p>
+                                <p><span className={classes['blog-title']}>{blog.title}</span> - <small className={classes['days-posted']}><i>{formatDateTime(blog.updated_on)}</i></small>
+                                    {` - `} <small className={classes['time-read']}>{blog.read_time} min read</small></p>
                                 <p className={classes['blog-small-content']}>{blog.short_intro}</p>
-                                <Tags tags={blog.tags} time={blog.read_time} />
+                                <Tags tags={blog.tags} />
                             </div>
                             <div className={classes['image-info']}>
                                 <Image src="/temp.jpeg" alt="Shrey Kumar" height={200} width={300} layout="intrinsic" />
