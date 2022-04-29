@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import BlogDetail from '../../components/blogDetail/BlogDetail';
 import Header from '../../components/header/Header';
+import SocialMediaFooter from '../../components/socialMediaFooter/SocialMediaFooter';
 import { fetchContentDataStart } from '../../redux/slices/contentSlice';
 
 import classes from "../../styles/Home.module.scss";
@@ -33,6 +34,7 @@ const Post = () => {
             <main className={classes['main-section']}>
                 <BlogDetail blog={blog} />
             </main>
+            <SocialMediaFooter />
         </>
     )
 }

@@ -26,6 +26,10 @@
     & > p {
         font-family: $montserrat-font;
     }
+
+    @include for-phone-only {
+        font-size: 0.75rem;
+    }
 }
 
 .logo-image {
