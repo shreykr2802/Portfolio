@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+}
+
+.loading-heart {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    transform-origin: 50px 50px;
+}
+.loading-heart div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: $primary-color;
+    animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.loading-heart div:after,
+.loading-heart div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: $primary-color;
+}
+.loading-heart div:before {
+    left: -32px;
+    border-radius: 50% 0 0 50%;
+}
+.loading-heart div:after {
+    top: -32px;
+    border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+    0% {
+        transform: scale(0.95);
+    }
+    5% {
+        transform: scale(1.1);
+    }
+    39% {
+        transform: scale(0.85);
+    }
+    45% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
