@@ -13,7 +13,7 @@ const BlogsSmallInfoList = () => {
         <div className={classes['blog-list-section']}>
             {blogs.map(blog => {
                 return (
-                    <Link href={`/blog/${blog.id}`} key={blog.id}>
+                    <Link href={`/blog/${blog.name}`} key={blog.id}>
                         <div className={classes['small-blog-container']}>
                             <div className={classes['small-blog-info']}>
                                 <p><span className={classes['blog-title']}>{blog.title}</span> - <small className={classes['days-posted']}><i>{formatDateTime(blog.updated_on)}</i></small>

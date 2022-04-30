@@ -46,8 +46,23 @@ const blogSlice = createSlice({
             state.error = action.payload;
             state.loading = false;
         },
+        fetchBlogTagsDataStart: (state, action: PayloadAction<any>) => {
+            state.error = "";
+            state.loading = true;
+        },
+        fetchBlogTagsDataSuccess: (state, action: PayloadAction<any>) => {
+            state.error = "";
+            state.loading = false;
+            state.blogs = action.payload;
+        },
+        fetchBlogTagsDataFailed: (state, action) => {
+            state.error = action.payload;
+            state.loading = false;
+        },
     }
 });
 
-export const { fetchBlogDataStart, fetchBlogDataSuccess, fetchBlogDataFailed, fetchBlogDataByIdStart, fetchBlogDataByIdSuccess, fetchBlogDataByIdFailed } = blogSlice.actions;
+export const { fetchBlogDataStart, fetchBlogDataSuccess, fetchBlogDataFailed,
+    fetchBlogDataByIdStart, fetchBlogDataByIdSuccess, fetchBlogDataByIdFailed,
+    fetchBlogTagsDataStart, fetchBlogTagsDataSuccess, fetchBlogTagsDataFailed } = blogSlice.actions;
 export default blogSlice.reducer;
