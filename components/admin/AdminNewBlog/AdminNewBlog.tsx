@@ -29,6 +29,7 @@ const AdminNewBlog = () => {
     const [displayContent, setDisplayContents] = useState<string>("");
     const [mainImage, setMainImage] = useState<any>(null);
     const [images, setImages] = useState<IImage[] | []>([]);
+    const [namedRoute, setNamedRoute] = useState<String>("");
     const dispatch = useDispatch();
     const router = useRouter();
 
@@ -67,7 +68,8 @@ const AdminNewBlog = () => {
             tags: selectedTags.map((tag: any) => tag.id),
             content,
             mainImage,
-            images
+            images,
+            namedRoute
         }
         dispatch(insertNewBlogStart(body));
     }
@@ -124,6 +126,7 @@ const AdminNewBlog = () => {
                 </div>
                 <LabelAndInputContainer>
                     <LabelAndInput name="Title" type="text" value={title} setValue={setTitle} />
+                    <LabelAndInput name="Named Route" type="text" value={namedRoute} setValue={setNamedRoute} />
                     <LabelAndInput name="Read Time" type="text" value={readTime} setValue={setReadTime} />
                     <MultiSelectLabelInput name="Tags" onSelect={onSelect} onRemove={onRemove} selectedValue={selectedTags} tags={tags} />
                     <LabelAndInput name="Short Intro" type="textarea" value={shortIntro} setValue={setShortIntro} />
