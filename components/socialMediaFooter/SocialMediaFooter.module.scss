@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins";
 
 .footer-social-media {
     width: 100%;
@@ -15,10 +16,30 @@
     font-family: $montserrat-font;
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 2.5rem;
     line-height: 59px;
     text-align: center;
     color: $white-color;
+
+    @include for-medium-desktop-up {
+        font-size: 2.5rem;
+    }
+
+    @include for-desktop-up {
+        font-size: 2.25rem;
+    }
+
+    @include for-tablet-landscape-up {
+        font-size: 2rem;
+    }
+
+    @include for-tablet-portrait-up {
+        font-size: 1.5rem;
+    }
+
+    @include for-phone-only {
+        font-size: 1rem;
+    }
 }
 
 .social-media-links {
@@ -27,6 +48,18 @@
     align-items: center;
     justify-content: space-evenly;
     width: 60%;
+
+    @include for-tablet-landscape-up {
+        width: 70%;
+    }
+
+    @include for-tablet-portrait-up {
+        width: 90%;
+    }
+
+    @include for-phone-only {
+        width: 100%;
+    }
 }
 
 .text-copyright {
@@ -37,4 +70,8 @@
     line-height: 59px;
     text-align: center;
     color: $primary-color;
+
+    @include for-phone-only {
+        font-size: 10px;
+    }
 }

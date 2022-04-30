@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins";
 
 .contents-container {
     background-color: $primary-color;
@@ -20,12 +21,53 @@
     position: absolute;
     bottom: 0;
     right: 10px;
+    height: 42.375rem;
+    width: 28.313rem;
+    background: url("/shrey-1.png");
+    background-size: cover;
+
+    animation: glitch 3.75s infinite steps(1);
+
+    @include for-tablet-landscape-up {
+        height: 35rem;
+        width: 23rem;
+    }
+
+    @include for-tablet-portrait-up {
+        height: 30rem;
+        width: 20rem;
+    }
+
+    @include for-phone-only {
+        height: 17rem;
+        width: 11rem;
+    }
 }
 
 .hello-text {
     font-family: $montserrat-font;
     font-weight: 800;
     letter-spacing: 2px;
+
+    @include for-medium-desktop-up {
+        font-size: 5rem;
+    }
+
+    @include for-desktop-up {
+        font-size: 4rem;
+    }
+
+    @include for-tablet-landscape-up {
+        font-size: 3rem;
+    }
+
+    @include for-tablet-portrait-up {
+        font-size: 2.5rem;
+    }
+
+    @include for-phone-only {
+        font-size: 2rem;
+    }
 }
 
 .scroll-down {
@@ -41,6 +83,10 @@
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
+
+    @include for-tablet-landscape-up {
+        flex-flow: column;
+    }
 }
 
 .scroll-down-text {
@@ -64,5 +110,26 @@
     }
     100% {
         transform: translateY(-5px);
+    }
+}
+
+@keyframes glitch {
+    0%,
+    55.1%,
+    100% {
+        background: url("/Shrey-Home.png");
+        background-size: cover;
+    }
+    50% {
+        background: url("/shrey-1.png");
+        background-size: cover;
+    }
+    52.5% {
+        background: url("/shrey-2.png");
+        background-size: cover;
+    }
+    55% {
+        background: url("/shrey-3.png");
+        background-size: cover;
     }
 }

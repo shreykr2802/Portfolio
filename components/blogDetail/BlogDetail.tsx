@@ -7,16 +7,28 @@ import classes from "./BlogDetail.module.scss";
 
 const BlogDetail = ({ blog }: any) => {
 
-    const [displayContent, setDisplayContent] = useState<string>("");
-
     useEffect(() => {
-        let oriContent = blog?.content;
+        let newContent = blog?.content;
+        let lastIndex = 0;
+        const mainDiv = document.createElement("div");
         for (let i = 0; i < blog?.images?.length; i++) {
-            oriContent = oriContent.replace(`{{image ${i + 2}}}`, `<br/><div style='height: 25rem; overflow: hidden; text-align: center;'>
-            <Image src=${blog?.images[i]?.data} height={100} width={100} layout="fill" objectFit="cover" />
-        </div>`);
+            const text = newContent.slice(lastIndex, newContent.indexOf(`{{image ${i + 2}}}`));
+            lastIndex = newContent.indexOf(`{{image ${i + 2}}}`) + `{{image ${i + 2}}}`.length;
+            const p = document.createElement("p");
+            const textNode = document.createTextNode(text);
+            p.appendChild(textNode);
+            mainDiv.appendChild(p);
+            const br = document.createElement("br");
+            mainDiv.appendChild(br);
+            const img = document.createElement("img");
+            img.setAttribute("src", blog?.images[i]?.data);
+            img.classList.add(classes["rest-image-prop"]);
+            mainDiv.appendChild(img);
+            mainDiv.appendChild(br);
         }
-        setDisplayContent(oriContent);
+        const el = document.getElementById("__blog_detail");
+        while (el?.firstChild) el.removeChild(el.firstChild);
+        document.getElementById("__blog_detail")?.appendChild(mainDiv);
     }, [blog.images])
 
     return (
@@ -33,9 +45,9 @@ const BlogDetail = ({ blog }: any) => {
             </div>
             <div>
                 {blog?.mainImage?.data && <div className={classes['blog-detail-main-image']} >
-                    <Image src={blog?.mainImage?.data} height={100} width={100} layout="fill" objectFit="cover" />
+                    <Image src={blog?.mainImage?.data} layout="fill" />
                 </div>}
-                <div className={classes['blog-detail-main-text']} dangerouslySetInnerHTML={{ __html: displayContent }}>
+                <div className={classes['blog-detail-main-text']} id="__blog_detail">
                 </div>
             </div>
         </div>

@@ -24,6 +24,7 @@ const contentSlice = createSlice({
             state.error = "";
             state.loading = true;
             state.activeId = action.payload;
+            state.content = {};
         },
         fetchContentDataSuccess: (state, action: PayloadAction<any>) => {
             state.error = "";

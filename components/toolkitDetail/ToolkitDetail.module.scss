@@ -1,29 +1,50 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins";
 
 .toolkit-detail-box {
     background: $white-color;
     border: 2px solid $primary-color;
     box-shadow: 4px 4px 16px 8px $pink-color-600;
     border-radius: 16px;
-    height: 180px;
-    width: 180px;
+    height: 11.25rem;
+    width: 11.25rem;
     margin: 2rem;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
+
+    @include for-tablet-portrait-up {
+        height: 10rem;
+        width: 10rem;
+        margin: 1.5rem;
+    }
+
+    @include for-phone-only {
+        height: 7.5rem;
+        width: 7.5rem;
+        margin: 1rem;
+    }
 }
 
 .toolkit-name {
     font-family: $montserrat-font;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 29px;
     color: $primary-color;
     padding: 0;
     margin: 0;
+
+    @include for-tablet-portrait-up {
+        font-size: 1.25rem;
+    }
+
+    @include for-phone-only {
+        font-size: 0.75rem;
+    }
 }
 
 .hidden-visibility {

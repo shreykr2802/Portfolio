@@ -1,8 +1,14 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins";
 
 .blog-list-section {
     width: 70%;
     margin: 2rem;
+
+    @include for-tablet-portrait-up {
+        width: 95%;
+        margin: 2.5%;
+    }
 }
 
 .small-blog-info {
@@ -19,6 +25,13 @@
     &:hover {
         cursor: pointer;
         border: 0.1px solid $gray-color-200;
+    }
+
+    @include for-tablet-portrait-up {
+        flex-flow: column-reverse;
+        border: 1px solid $gray-color-200;
+        margin-top: 5px;
+        padding-bottom: 5px;
     }
 }
 
@@ -50,5 +63,17 @@
     font-weight: 400;
     font-size: 1rem;
     line-height: 23px;
+    color: $black-color-200;
+
+    @include for-tablet-portrait-up {
+        font-size: 0.75rem;
+    }
+}
+
+.time-read {
+    font-family: $montserrat-font;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 0.7rem;
     color: $black-color-200;
 }

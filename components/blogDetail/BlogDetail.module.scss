@@ -1,7 +1,8 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins";
 
 .blog-detail-section {
-    margin: 0rem 10rem;
+    margin: 0rem 5%;
 }
 
 .blog-detail-main-image {
@@ -9,15 +10,26 @@
     height: 25rem;
     position: relative;
     overflow: hidden;
+
+    @include for-tablet-portrait-up {
+        height: 10rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .blog-detail-main-text {
     font-family: $montserrat-font;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1rem;
     line-height: 50px;
     text-align: justify;
+    text-align: center;
+
+    @include for-tablet-portrait-up {
+        font-size: 0.75rem;
+        line-height: 20px;
+    }
 }
 
 .days-posted {
@@ -26,6 +38,10 @@
     font-weight: 200;
     font-size: 0.7rem;
     color: $black-color-200;
+
+    @include for-tablet-portrait-up {
+        font-size: 0.5rem;
+    }
 }
 
 .blog-title {
@@ -35,6 +51,10 @@
     font-size: 1.5rem;
     line-height: 23px;
     color: $black-color-200;
+
+    @include for-tablet-portrait-up {
+        font-size: 1rem;
+    }
 }
 
 .main-text-intro {
@@ -61,4 +81,16 @@
     font-family: $montserrat-font;
     font-weight: 100;
     color: $gray-color-600;
+
+    @include for-tablet-portrait-up {
+        font-size: 1rem;
+    }
+}
+
+.rest-image-prop {
+    width: 70%;
+
+    @include for-tablet-portrait-up {
+        font-size: 1rem;
+    }
 }

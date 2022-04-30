@@ -14,36 +14,36 @@ const SocialMediaFooter = () => {
         {
             name: "instagram",
             iconName: "bi:instagram",
-            height: "50",
-            width: "50",
+            height: "48",
+            width: "48",
             link: "https://instagram.com/shreykr2802"
         },
         {
             name: "linkedin",
             iconName: "bi:linkedin",
-            height: "50",
-            width: "50",
+            height: "48",
+            width: "48",
             link: "https://linkedin.com/in/shreykr2802"
         },
         {
             name: "github",
             iconName: "bi:github",
-            height: "50",
-            width: "50",
+            height: "48",
+            width: "48",
             link: "https://github.com/shreykr2802"
         },
         {
             name: "twitter",
             iconName: "bi:twitter",
-            height: "50",
-            width: "50",
+            height: "48",
+            width: "48",
             link: "https://twitter.com/shreykr2802"
         },
         {
             name: "mail",
             iconName: "bi:envelope",
-            height: "50",
-            width: "50",
+            height: "48",
+            width: "48",
             link: "mailto:shreykr2802@gmail.com"
         }
     ]
