@@ -22,7 +22,7 @@ const BlogsSmallInfoList = () => {
                                 <Tags tags={blog.tags} />
                             </div>
                             <div className={classes['image-info']}>
-                                <Image src="/temp.jpeg" alt="Shrey Kumar" height={200} width={300} layout="intrinsic" />
+                                <Image src={blog.short_image} alt={blog.name} height={200} width={300} layout="intrinsic" />
                             </div>
                         </div>
                     </Link>
