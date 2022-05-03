@@ -21,7 +21,8 @@ const rootReducer = combineReducers({
 
 export type RootState = ReturnType<typeof rootReducer>;
 //@ts-ignore
-const composeEnhancers = typeof window != 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = compose;
+//typeof window != 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 
 const sagaMiddleware = createSagaMiddleware();
 
